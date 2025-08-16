@@ -27,6 +27,8 @@ juce_add_plugin(WaveScope
     PRODUCT_NAME "WaveScope"
 )
 
+juce_generate_juce_header(WaveScope)
+
 target_sources(WaveScope PRIVATE
     Source/PluginProcessor.cpp
     Source/PluginProcessor.h
