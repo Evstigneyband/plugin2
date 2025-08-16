@@ -29,6 +29,11 @@ juce_add_plugin(WaveScope
 
 juce_generate_juce_header(WaveScope)
 
+target_compile_definitions(WaveScope
+    PUBLIC
+        JUCE_VST3_CAN_REPLACE_VST2=0
+)
+
 target_sources(WaveScope PRIVATE
     Source/PluginProcessor.cpp
     Source/PluginProcessor.h
